@@ -1,5 +1,6 @@
 package com.example.mobile2_parcial1
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -21,6 +22,18 @@ class MainActivity : AppCompatActivity() {
         recyclerViewMain.adapter = adapter
 
         adapter.submitList(getListadoObras())
+
+        adapter.onItemClickListener = { obra ->
+            val intent = Intent(this, DetailActivity::class.java)
+            intent.putExtra("nombre", obra.nombre)
+            intent.putExtra("url", obra.url)
+            intent.putExtra("autor", obra.autor)
+            intent.putExtra("tecnica", obra.tecnica)
+            intent.putExtra("año", obra.año)
+
+            startActivity(intent)
+
+        }
     }
 
     private fun getListadoObras(): MutableList<Obra>? {

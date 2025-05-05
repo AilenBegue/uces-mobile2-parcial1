@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <ImageView
+        android:id="@+id/ivObraDetail"
+        android:layout_width="248dp"
+        android:layout_height="165dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/tvAutorDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="Autor"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/ivObraDetail"
+        app:layout_constraintEnd_toEndOf="@+id/ivObraDetail"
+        app:layout_constraintStart_toStartOf="@+id/ivObraDetail" />
+
+    <TextView
+        android:id="@+id/tvObraDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="Nombre Obra"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvAutorDetail"
+        app:layout_constraintEnd_toEndOf="@+id/tvAutorDetail"
+        app:layout_constraintStart_toStartOf="@+id/tvAutorDetail" />
+
+    <TextView
+        android:id="@+id/tvTecnicaDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Técnica utilizada"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/ivObraDetail"
+        app:layout_constraintStart_toStartOf="@+id/ivObraDetail"
+        app:layout_constraintTop_toBottomOf="@+id/ivObraDetail" />
+
+    <TextView
+        android:id="@+id/tvAñoDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Año"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/tvTecnicaDetail"
+        app:layout_constraintStart_toStartOf="@+id/tvTecnicaDetail"
+        app:layout_constraintTop_toBottomOf="@+id/tvTecnicaDetail" />
+
+    <Button
+        android:id="@+id/btnBackDetail"
+        android:layout_width="67dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#C5C5C5"
+        app:icon="@android:drawable/ic_menu_revert"
+        app:iconPadding="4dp"
+        app:iconSize="20sp"
+        app:iconTint="#3A3A3A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

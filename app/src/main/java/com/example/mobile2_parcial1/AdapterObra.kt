@@ -13,6 +13,8 @@ import com.bumptech.glide.Glide
 
 class AdapterObra(val context: Context) : ListAdapter<Obra, AdapterObra.ViewHolder>(DiffCallBack){
 
+    lateinit var onItemClickListener: (Obra) -> Unit
+
     inner class ViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         private val nombre: TextView = view.findViewById(R.id.tvObra)
         private val autor: TextView = view.findViewById(R.id.tvAutor)
@@ -23,12 +25,16 @@ class AdapterObra(val context: Context) : ListAdapter<Obra, AdapterObra.ViewHold
         fun bind(obra: Obra) {
             nombre.text = obra.nombre
             autor.text = obra.autor
-            tecnica.text = "Técnica: " + obra.tecnica
+            tecnica.text = obra.tecnica
             año.text = "Año: " + obra.año
 
             Glide.with(context)
                 .load(obra.url)
                 .into(imagenObra)
+
+            view.setOnClickListener {
+                onItemClickListener(obra)
+            }
         }
 
 

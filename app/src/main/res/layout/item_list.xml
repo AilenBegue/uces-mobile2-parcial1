@@ -33,31 +33,32 @@
         android:id="@+id/tvAutor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
+        android:layout_marginTop="4dp"
         android:text="Nombre Autor"
         android:textSize="12sp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="@+id/tvObra"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tvObra" />
+        app:layout_constraintStart_toStartOf="@+id/tvObra"
+        app:layout_constraintTop_toBottomOf="@+id/tvObra" />
 
     <TextView
         android:id="@+id/tvAño"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
         android:text="Año"
         android:textSize="12sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="@+id/imageViewObra"
-        app:layout_constraintStart_toStartOf="@+id/tvObra" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/tvTecnica"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="4dp"
         android:text="Técnica utilizada"
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/tvAño"
-        app:layout_constraintStart_toStartOf="@+id/tvObra" />
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
